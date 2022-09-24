@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>453E047C-5834-4CE3-84CE-9119382D7EBB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>media-encoder</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7B99B503-AE06-4E2D-8A26-6BC6056EE459</key>
+		<string>ssh://github.com/josh04/video-mush.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>xc/media-encoder/media-encoder.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7B99B503-AE06-4E2D-8A26-6BC6056EE459</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/josh04/video-mush.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>7B99B503-AE06-4E2D-8A26-6BC6056EE459</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7B99B503-AE06-4E2D-8A26-6BC6056EE459</string>
+			<key>IDESourceControlWCCName</key>
+			<string>video-mush</string>
+		</dict>
+	</array>
+</dict>
+</plist>

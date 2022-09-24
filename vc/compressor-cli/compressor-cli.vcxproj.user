@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)$(Platform)\$(Configuration)\bin</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>--debug --gui --process raster --loop --model "F:/code/Models/crytek-sponza/sponza.obj" </LocalDebuggerCommandArguments>
+    <LocalDebuggerEnvironment>PYTHONPATH=</LocalDebuggerEnvironment>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LocalDebuggerCommandArguments>--gui --process motion-explorer --loop --model "c:/code/models/sibenik/sibenik.obj" --frames "E:\post-cluster-frames\Sibenik1081\1" --ffmpeg "f:/rank.mp4" --crf 24 --encoder x264 --output-transfer rec709</LocalDebuggerCommandArguments>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerWorkingDirectory>$(SolutionDir)$(Platform)\$(Configuration)\bin</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+</Project>

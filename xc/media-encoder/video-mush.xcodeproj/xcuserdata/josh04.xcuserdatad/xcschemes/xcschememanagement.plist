@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>Video Mush Test Factory.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
+		<key>Video Mush Toolbox.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>14</integer>
+		</dict>
+		<key>Video Mush.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>mush-cli.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>13</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>47DA834618BCD8E700DDB0AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>47DA83A018BCDFEF00DDB0AB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E15F95E192F7098002EF084</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E15F978192F7098002EF084</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E83FCD71BADDD9D00E168BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9E83FCE91BADDD9D00E168BD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

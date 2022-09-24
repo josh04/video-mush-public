@@ -1,0 +1,79 @@
+﻿<Window x:Class="video_mush_gui_new.NodeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:video_mush_gui_new"
+        xmlns:i="clr-namespace:System.Windows.Interop;assembly=PresentationCore"
+        mc:Ignorable="d"
+        Title="NodeWindow" Height="587.308" Width="569.538">
+
+    <Window.Resources>
+        <local:BoolToStringConverter x:Key="BooleanToInitConverter" FalseValue="" TrueValue="(I)" />
+        <local:BoolToStringConverter x:Key="BooleanToGuiConverter" FalseValue="" TrueValue="(G)" />
+    </Window.Resources>
+    <Grid>
+        <Button x:Name="addProcessor" Content="Add Processor" HorizontalAlignment="Left" Margin="325,205,0,0" VerticalAlignment="Top" Width="94" Click="addProcessor_Click"/>
+        <Button x:Name="addNode" Content="Add Node" HorizontalAlignment="Left" Margin="245,11,0,0" VerticalAlignment="Top" Width="75" Click="addNode_Click"/>
+        <Button x:Name="addInput" Content="Add Input" HorizontalAlignment="Left" Margin="245,36,0,0" VerticalAlignment="Top" Width="75" Click="addInput_Click"/>
+        <Label x:Name="label" Content="Nodes:" HorizontalAlignment="Left" Margin="27,8,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Processors:" HorizontalAlignment="Left" Margin="5,39,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nodesCount" HorizontalAlignment="Left" Height="23" Margin="74,11,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="processorsCount" HorizontalAlignment="Left" Height="23" Margin="74,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+        <Image x:Name="displayImage" HorizontalAlignment="Left" Height="132" Margin="325,10,0,0" VerticalAlignment="Top" Width="132">
+            <Image.Source>
+                <i:D3DImage x:Name="dxImage"/>
+            </Image.Source>
+        </Image>
+        <Button x:Name="dxButton" Content="Make DX Context" HorizontalAlignment="Left" Margin="325,147,0,0" VerticalAlignment="Top" Width="117" Click="dxButton_Click"/>
+        <TextBox x:Name="dxStatus" HorizontalAlignment="Left" Height="23" Margin="74,104,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="59"/>
+        <Button x:Name="getProcessors" Content="Get Processors" HorizontalAlignment="Left" Margin="325,230,0,0" VerticalAlignment="Top" Width="94" Click="getProcessors_Click"/>
+        <ListBox x:Name="processorBox" HorizontalAlignment="Left" Height="86" Margin="10,205,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="processorBox_SelectionChanged"/>
+        <ListBox x:Name="nodeBox" HorizontalAlignment="Left" Height="86" Margin="115,205,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="nodeBox_SelectionChanged"/>
+        <ListBox x:Name="linkBox" HorizontalAlignment="Left" Height="86" Margin="220,205,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="allNodeBox" ItemsSource="{DynamicResource all_nodes}" SelectedValuePath="id" HorizontalAlignment="Left" Height="94" Margin="10,322,0,0" VerticalAlignment="Top" Width="310" SelectionChanged="allNodeBox_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} -> {1} {2} {3}">
+                                <Binding Path="id"/>
+                                <Binding Path="name" />
+                                <Binding Path="is_inited" Converter="{StaticResource BooleanToInitConverter}" />
+                                <Binding Path="is_gui" Converter="{StaticResource BooleanToGuiConverter}" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox x:Name="linkBox2" HorizontalAlignment="Left" Height="86" Margin="10,452,0,0" VerticalAlignment="Top" Width="310"/>
+        <Label x:Name="label1" Content="Processors" HorizontalAlignment="Left" Margin="10,179,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label3" Content="Processor Nodes" HorizontalAlignment="Left" Margin="115,179,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label4" Content="Links" HorizontalAlignment="Left" Margin="220,179,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label5" Content="All Nodes" HorizontalAlignment="Left" Margin="10,296,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label6" Content="Links" HorizontalAlignment="Left" Margin="10,421,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="addLink" Content="Add Link" HorizontalAlignment="Left" Margin="337,347,0,0" VerticalAlignment="Top" Width="75" Click="addLink_Click"/>
+        <Button x:Name="addNodeTo" Content="Add to Processor" HorizontalAlignment="Left" Margin="417,347,0,0" VerticalAlignment="Top" Width="126" Click="addNodeTo_Click"/>
+        <ListBox x:Name="typeBox" ItemsSource="{DynamicResource types}" SelectedValuePath="type" HorizontalAlignment="Left" Height="86" Margin="140,11,0,0" VerticalAlignment="Top" Width="100">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock>
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} -> {1}">
+                                <Binding Path="type" />
+                                <Binding Path="name" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button x:Name="runInits" Content="Run Inits" HorizontalAlignment="Left" Margin="58,132,0,0" VerticalAlignment="Top" Width="75" Click="runInits_Click"/>
+        <Button x:Name="guiInit" Content="Make GUI" HorizontalAlignment="Left" Margin="140,132,0,0" VerticalAlignment="Top" Width="75" Click="guiInit_Click"/>
+        <Button x:Name="addGui" Content="Add to GUI" HorizontalAlignment="Left" Margin="337,372,0,0" VerticalAlignment="Top" Width="75" Click="addGui_Click"/>
+        <Button x:Name="spawnInput" Content="Spawn Input Thread" HorizontalAlignment="Left" Margin="417,322,0,0" VerticalAlignment="Top" Width="126" Click="spawnInput_Click"/>
+        <Button x:Name="process" Content="Process" HorizontalAlignment="Left" Margin="337,322,0,0" VerticalAlignment="Top" Width="75" Click="process_Click"/>
+
+    </Grid>
+</Window>

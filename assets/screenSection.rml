@@ -1,0 +1,58 @@
+<rml>
+<head>
+<link type="text/rcss" href="default.rcss" />
+<style>
+
+body {
+z-index: top;
+}
+
+#sidebar {
+position: absolute;
+top:0px;
+left: 0px;
+width: 320px;
+}
+
+#main {
+position: absolute;
+top:0px;
+left: 0px;
+}
+
+#fps {
+position: absolute;
+bottom: 0px;
+right: 10px;
+}
+
+.big {
+font-size: 80pt;
+color: #FFFFFF;
+}
+
+</style>
+<script>
+from _rocketcore import *
+from libscarlet import *
+#import threading
+
+def scarletevent(e):
+    return;
+
+def scarletupdate(d):
+    return;
+
+</script>
+</head>
+<body>
+<div id="sidebar">
+
+</div>
+<div id="main">
+<span id="label" class="big">TEST BLOO BLOO BLOO BLOO BLOO BLOO</span>
+
+<span id="fps">TEST TEST TEST TEST TEST TEST</span>
+</div>
+</body>
+</rml>

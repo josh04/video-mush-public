@@ -1,0 +1,110 @@
+<template name="filter" content="content">
+<head>
+	<link type="text/rcss" href="default.rcss" />
+	<link type="text/rcss" href="gohdr.rcss" />
+	<style>
+	
+#titleBar{
+	width: 100%;
+	height: 0.8cm;
+	
+    background-decorator: tiled-horizontal;
+	
+	background-left-image: all.png 513px 768px 522px 862px;
+	background-center-image: all.png repeat-truncate 513px 768px 522px 862px;
+	background-right-image: all.png 513px 768px 522px 862px;
+}
+
+#filterSelect {
+    /*width: 4.48cm;
+    height: 0.45cm;
+	margin: 0.15cm;*/
+	
+	color: #8c8b8b;
+	
+	height: 0.8cm;
+	padding-top: 0.2cm;
+	padding-bottom: 0cm;
+	padding-left: 0.5cm;
+	padding-right: 0.25cm;
+	width: 5cm;
+	margin-right: 0.2cm;
+	margin-left: 0.5cm;
+		
+	/*line-height: 100%;*/
+	
+	background-decorator: tiled-horizontal;
+	
+	background-left-image: all.png 640px 672px 678px 790px;
+	background-center-image: all.png repeat-truncate 692px 672px 704px 790px;
+	background-right-image: all.png 692px 672px 732px 790px;
+	
+	border-width: 0 0.05cm 0 0;
+	border-style: solid;
+	border-color: #7ac160;
+}
+
+#filterSelect selectvalue {
+
+	padding-left: 0.05cm;
+	text-transform: uppercase;
+	color: #8c8b8b;
+}
+
+#filterSelect selectbox {
+
+	padding-left: 0.25cm;
+	padding-right: 0cm;
+	margin-left: 0.25cm;
+	margin-bottom: 0.1cm;
+	
+	margin-right: 0.75cm;
+	background-color: #262626;
+	margin-top: -0.6cm;
+}
+
+#filterSelect selectbox option {
+    width: auto;
+    padding: 1px;
+    color: #8c8b8b;
+	text-transform: uppercase;
+}
+
+#filterSelect selectbox option:hover {
+    background-color: #7ac160;
+	color: #fff;
+}
+
+	</style>
+	<script>
+from libscarlet import *
+
+def changeFilter():
+	return;
+	#region.setFilter(engine.getFilter(event.parameters['value']))
+
+def move():
+	if event.target_element.GetAttribute("move_target") != "":
+		region.setRegion(vec4(document.offset_left, document.offset_top, document.offset_width, document.offset_height))
+
+def resize():
+	if event.target_element.GetAttribute("size_target") != "":
+		#print str(document.offset_left) + ", " + str(document.offset_top) + ", " + str(document.offset_width) + ", " + str(document.offset_height)
+		region.setRegion(vec4(document.offset_left, document.offset_top, document.offset_width, document.offset_height))
+
+def scarletevent(e):
+	return;
+		
+	</script>
+</head>
+<body>
+	<handle id="movehandle" move_target="#document" onhandledrag="move()">
+		<div id="titleBar">
+			<button id="close" onclick="region.close()"></button>
+			<select id="filterSelect" onchange="changeFilter()"></select>
+		</div>
+	</handle>
+	<div id="content"></div>
+	<handle id="sizehandle" size_target="#document" onhandledrag="resize()" />
+</body>
+</template>

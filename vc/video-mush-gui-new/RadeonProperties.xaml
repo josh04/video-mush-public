@@ -1,0 +1,46 @@
+﻿<Window x:Class="video_mush_gui_new.RadeonProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:video_mush_gui_new"
+        xmlns:mush="clr-namespace:video_mush_gui_new.Properties"
+        mc:Ignorable="d"
+        Title="RadeonRays" Height="377.968" Width="525">
+    <Grid>
+        <ComboBox x:Name="amdCameraBox"
+                 SelectedIndex="{Binding amdCameraType, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Margin="352,66,0,0" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120">
+            <ComboBoxItem Content="Perspective"/>
+            <ComboBoxItem Content="DOF"/>
+            <ComboBoxItem Content="360"/>
+        </ComboBox>
+        <Label x:Name="label" Content="Camera:" Margin="299,66,0,0" Height="26" VerticalAlignment="Top" HorizontalAlignment="Left" Width="53"/>
+        <TextBox x:Name="amdShadowRays" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdShadowRays, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="128,66,0,0"/>
+        <Label x:Name="label1" Content="Shadow Rays:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="46,66,0,0"/>
+        <TextBox x:Name="amdAORays" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdAORays, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="128,94,0,0"/>
+        <Label x:Name="label1_Copy" Content="AO Rays:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,90,0,0"/>
+        <TextBox x:Name="amdBounces" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdBounces, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="128,122,0,0"/>
+        <Label x:Name="label1_Copy1" Content="Bounces:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,118,0,0"/>
+        <TextBox x:Name="amdSamples" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdSamples, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="128,150,0,0"/>
+        <Label x:Name="label1_Copy2" Content="Samples:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="71,146,0,0"/>
+        <TextBox x:Name="amdAORadius" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdAORadius, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="128,178,0,0"/>
+        <Label x:Name="label1_Copy3" Content="AO Radius:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="60,173,0,0"/>
+        <TextBox x:Name="amdSensorSize" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdSensorSize, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="352,94,0,0"/>
+        <Label x:Name="label1_Copy4" Content="Sensor Size:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,90,0,0"/>
+        <TextBox x:Name="amdFocusDistance" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdFocusDistance, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="352,149,0,0"/>
+        <Label x:Name="label1_Copy6" Content="Focus Distance:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="261,146,0,0"/>
+        <TextBox x:Name="amdAperture" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="{Binding amdAperture, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  VerticalAlignment="Top" Width="120" Margin="352,176,0,0"/>
+        <Label x:Name="label1_Copy7" Content="Aperture:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="293,173,0,0"/>
+        <CheckBox x:Name="amdEnableAO" Content="Enable AO"  IsChecked="{Binding amdEnableAO, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" HorizontalAlignment="Left" Margin="110,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="amdProgressive" Content="Fish Eye Env Map"  IsChecked="{Binding amdProgressive, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="amdShareOpenCL" Content="Share OpenCL"  IsChecked="{Binding amdShareOpenCL, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2_Copy" Content="Env Map Scale:" HorizontalAlignment="Left" Margin="263,202,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="amdEnvMapScale" HorizontalAlignment="Left" Height="23" Margin="352,203,0,0" TextWrapping="Wrap" Text="{Binding amdEnvMapScale, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="amdStereoDisplacement" Content="Stereo Displace" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" IsChecked="{Binding amdStereoDisplace, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="amdPathQuit" Content="Quit on camera path" HorizontalAlignment="Left" Margin="116,233,0,0" VerticalAlignment="Top" IsChecked="{Binding amdPathQuit, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <Label x:Name="label2_Copy1" Content="Max Frames:" HorizontalAlignment="Left" Margin="276,227,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="amdMaxFrames" HorizontalAlignment="Left" Height="23" Margin="352,230,0,0" TextWrapping="Wrap" Text="{Binding amdMaxFrames, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="120"/>
+        <CheckBox x:Name="multiDraw" Content="MultiDraw" HorizontalAlignment="Left" Margin="10,317,0,0" VerticalAlignment="Top"  IsChecked="{Binding amdMultiDraw, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+
+    </Grid>
+</Window>

@@ -1,0 +1,104 @@
+<rml>
+  <head>
+    <link type="text/rcss" href="default.rcss" />
+    <style>
+
+body {
+	z-index: bottom;
+    height:100%;
+}
+
+#sidebar {
+position: absolute;
+top:0px;
+left: 0px;
+width: 320px;
+}
+
+#main {
+position: absolute;
+top:0px;
+left: 0px;
+width: 100%;
+height: 100%;
+}
+
+#fps {
+position: absolute;
+bottom: 0px;
+right: 10px;
+font-size: 22pt;
+font-weight: bold;
+color: #FFFFFF;
+width: 400px;
+height: 40px;
+text-align:right;
+}
+
+#label {
+position:absolute;
+font-size:22pt;
+font-weight:bold;
+right:1.5%;
+width:50%;
+text-align:right;
+}
+
+
+#play {
+position:absolute;
+font-size:22pt;
+font-weight:bold;
+left: 11.5%;
+bottom: 0px;
+width:50%;
+text-align:left;
+height: 40px;
+}
+
+#mode {
+position:absolute;
+font-size:22pt;
+font-weight:bold;
+left: 11.5%;
+top: 0px;
+width:50%;
+text-align:left;
+}
+
+#lock {
+position:absolute;
+right: 3.5%;
+top: 11.5%;
+width:200px;
+height:200px;
+
+background-color: transparent;
+background-decorator: image;
+background-image: lock.png 0px 0px 454px 454px;
+
+visibility: hidden;
+}
+
+    </style>
+    <script>
+from _rocketcore import *
+from libscarlet import *
+#import threading
+
+def scarletevent(e):
+	return;
+
+def scarletupdate(d):
+    return;
+
+    </script>
+  </head>
+  <body>
+<div id="label"></div>
+<div id="mode">Mode</div>
+<div id="fps">GUI FPS</div>
+<div id="play">Process FPS</div>
+<div id="lock"></div>
+  </body>
+</rml>

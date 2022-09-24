@@ -1,0 +1,473 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Azure Event Handlers">
+      <UniqueIdentifier>{7c2b5dab-8c47-4179-a718-677618a361f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI">
+      <UniqueIdentifier>{cdb2da0f-7759-4d7b-b92a-f448baa562b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\GUI\File Handlers">
+      <UniqueIdentifier>{27ad2322-5a13-4516-badb-d1e5b1b1c064}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Config Structs">
+      <UniqueIdentifier>{27e0c1d1-b23d-452c-b485-05ea8cc5f204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D">
+      <UniqueIdentifier>{2d5b5b19-c2f6-4d36-898d-00e8c731fc96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\json">
+      <UniqueIdentifier>{5b2315d9-5462-416e-9157-bce03792ff21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Metrics">
+      <UniqueIdentifier>{969891fe-4a86-4921-8789-1071ad21249f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser">
+      <UniqueIdentifier>{43007f37-1a8f-4332-aa8d-9e1086ca87bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser\tinyobjloader">
+      <UniqueIdentifier>{98dbd765-63e4-4a4a-990c-ab82d36eee3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser\shaders">
+      <UniqueIdentifier>{30e18538-01b9-483a-9bfe-a3b12cb2ee58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser\shaders\path">
+      <UniqueIdentifier>{afbcb2c2-2210-422a-b6f1-303e4ea89d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser\shaders\scene_tess">
+      <UniqueIdentifier>{97eab4ce-8bc0-4ca6-83c5-978c9bea942c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3D\rasteriser\shaders\scene">
+      <UniqueIdentifier>{6100baf1-3592-424b-b03e-408f4426c1f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Node API">
+      <UniqueIdentifier>{40153f19-e977-4f22-adc2-332bce46c539}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\core\include\Mush Core\encoderEngine.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\fixedExposureProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\frameGrabber.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\frameStepper.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageBuffer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcessMetric.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcessor.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProperties.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\integerMapBuffer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\integerMapProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushLog.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\opencl.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\outputEngine.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\processNode.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\ringBuffer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\scrubbableFrameGrabber.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\SetThreadName.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\singleKernelProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\hdrEXR.hpp">
+      <Filter>Source Files\GUI\File Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\gui.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiAccessible.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiScreenSection.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushWindowInterface.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushWindow.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushEngine.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\inputConfig.hpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\metricConfig.hpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\outputConfig.hpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\sdlbits.h">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\sdlinterface.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\ssimProcess.hpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\psnrProcess.hpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\metricReporter.hpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\timerWrapper.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\tagInGui.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mush-core-dll.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\quitEventHandler.hpp">
+      <Filter>Source Files\Azure Event Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\stepperEventHandler.hpp">
+      <Filter>Source Files\Azure Event Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\pipeio.hpp">
+      <Filter>Source Files\GUI\File Handlers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushSidebar.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\openglProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_base.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_event_handler.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_path_io.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiConfig.hpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\fisheye2EquirectangularProcess.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\src\json\json.h">
+      <Filter>Source Files\3D\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\checkExists.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\puEncode.hpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereMapProcess.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\indexGLObject.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereGL.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\src\dummyEventable.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\src\mushMainScreen.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushRasteriser.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserEngine.hpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserScene.hpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\src\tinyobjloader\tiny_obj_loader.h">
+      <Filter>Source Files\3D\rasteriser\tinyobjloader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\src\rasteriserPathDrawer.hpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\cameraConfig.hpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserSceneTesselation.hpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushBuffer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\cubeMapDrawer.hpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\nodeProcessor.hpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\nodeManager.hpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\initNode.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\node_api.hpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\dxContext.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\fakeWindow.hpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\registerContainer.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushMemoryToGpu.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereGL2.hpp">
+      <Filter>Source Files\3D</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\src\encoderEngine.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\fixedExposureProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\imageBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\imageProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\imageProperties.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\integerMapBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushLog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\opencl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\ringBuffer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\SetThreadName.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\hdrEXR.cpp">
+      <Filter>Source Files\GUI\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\gui.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\guiAccessible.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\guiScreenSection.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\sdlinterface.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\ssimProcess.cpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\psnrProcess.cpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\timerWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\tagInGui.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\pipeio.cpp">
+      <Filter>Source Files\GUI\File Handlers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\frameGrabber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushMainScreen.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushSidebar.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\openglProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\camera_path_io.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\camera_base.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\camera_event_handler.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\fisheye2EquirectangularProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\json\json.c">
+      <Filter>Source Files\3D\json</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\checkExists.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\frameStepper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\puEncode.cpp">
+      <Filter>Source Files\Metrics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\indexGLObject.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\sphereGL.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\sphereMapProcess.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\inputConfig.cpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\outputConfig.cpp">
+      <Filter>Source Files\Config Structs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\dummyEventable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushEngine.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushWindow.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\mushRasteriser.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\singleKernelProcess.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\rasteriserEngine.cpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\rasteriserScene.cpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\tinyobjloader\tiny_obj_loader.cc">
+      <Filter>Source Files\3D\rasteriser\tinyobjloader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\rasteriserPathDrawer.cpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\rasteriserSceneTesselation.cpp">
+      <Filter>Source Files\3D\rasteriser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\node_api.cpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\nodeProcessor.cpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\nodeManager.cpp">
+      <Filter>Source Files\Node API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\dxContext.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\fakeWindow.cpp">
+      <Filter>Source Files\GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\core\src\sphereGL2.cpp">
+      <Filter>Source Files\3D</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\shaders\raster_tess.frag">
+      <Filter>Source Files\3D\rasteriser\shaders\scene_tess</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster_tess.geom">
+      <Filter>Source Files\3D\rasteriser\shaders\scene_tess</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster_tess.tess_control">
+      <Filter>Source Files\3D\rasteriser\shaders\scene_tess</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster_tess.tess_eval">
+      <Filter>Source Files\3D\rasteriser\shaders\scene_tess</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster_tess.vert">
+      <Filter>Source Files\3D\rasteriser\shaders\scene_tess</Filter>
+    </None>
+    <None Include="..\..\src\shaders\path.frag">
+      <Filter>Source Files\3D\rasteriser\shaders\path</Filter>
+    </None>
+    <None Include="..\..\src\shaders\path.geom">
+      <Filter>Source Files\3D\rasteriser\shaders\path</Filter>
+    </None>
+    <None Include="..\..\src\shaders\path.vert">
+      <Filter>Source Files\3D\rasteriser\shaders\path</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster.frag">
+      <Filter>Source Files\3D\rasteriser\shaders\scene</Filter>
+    </None>
+    <None Include="..\..\src\shaders\raster.vert">
+      <Filter>Source Files\3D\rasteriser\shaders\scene</Filter>
+    </None>
+  </ItemGroup>
+</Project>

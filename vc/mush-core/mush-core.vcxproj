@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\core\include\Mush Core\cameraConfig.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_base.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_event_handler.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\camera_path_io.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\checkExists.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\cubeMapDrawer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\dxContext.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\encoderEngine.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\fakeWindow.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\fisheye2EquirectangularProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\fixedExposureProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\frameGrabber.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\frameStepper.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\gui.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiAccessible.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiConfig.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\guiScreenSection.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\hdrEXR.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageBuffer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcessMetric.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProcessor.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\imageProperties.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\indexGLObject.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\initNode.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\inputConfig.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\integerMapBuffer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\integerMapProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\metricConfig.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\metricReporter.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mush-core-dll.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushEngine.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushBuffer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushLog.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushMemoryToGpu.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushRasteriser.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushSidebar.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushWindow.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\mushWindowInterface.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\nodeManager.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\nodeProcessor.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\node_api.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\opencl.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\openglProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\outputConfig.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\outputEngine.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\pipeio.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\processNode.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\psnrProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\puEncode.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\quitEventHandler.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserEngine.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserScene.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\rasteriserSceneTesselation.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\registerContainer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\ringBuffer.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\scrubbableFrameGrabber.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\sdlbits.h" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\sdlinterface.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\SetThreadName.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\singleKernelProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereGL.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereGL2.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\sphereMapProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\ssimProcess.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\stepperEventHandler.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\tagInGui.hpp" />
+    <ClInclude Include="..\..\src\core\include\Mush Core\timerWrapper.hpp" />
+    <ClInclude Include="..\..\src\core\src\dummyEventable.hpp" />
+    <ClInclude Include="..\..\src\core\src\json\json.h" />
+    <ClInclude Include="..\..\src\core\src\mushMainScreen.hpp" />
+    <ClInclude Include="..\..\src\core\src\rasteriserPathDrawer.hpp" />
+    <ClInclude Include="..\..\src\core\src\tinyobjloader\tiny_obj_loader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\core\src\camera_base.cpp" />
+    <ClCompile Include="..\..\src\core\src\camera_event_handler.cpp" />
+    <ClCompile Include="..\..\src\core\src\camera_path_io.cpp" />
+    <ClCompile Include="..\..\src\core\src\checkExists.cpp" />
+    <ClCompile Include="..\..\src\core\src\dummyEventable.cpp" />
+    <ClCompile Include="..\..\src\core\src\dxContext.cpp" />
+    <ClCompile Include="..\..\src\core\src\encoderEngine.cpp" />
+    <ClCompile Include="..\..\src\core\src\fakeWindow.cpp" />
+    <ClCompile Include="..\..\src\core\src\fisheye2EquirectangularProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\fixedExposureProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\frameGrabber.cpp" />
+    <ClCompile Include="..\..\src\core\src\frameStepper.cpp" />
+    <ClCompile Include="..\..\src\core\src\gui.cpp" />
+    <ClCompile Include="..\..\src\core\src\guiAccessible.cpp" />
+    <ClCompile Include="..\..\src\core\src\guiScreenSection.cpp" />
+    <ClCompile Include="..\..\src\core\src\hdrEXR.cpp" />
+    <ClCompile Include="..\..\src\core\src\imageBuffer.cpp" />
+    <ClCompile Include="..\..\src\core\src\imageProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\imageProperties.cpp" />
+    <ClCompile Include="..\..\src\core\src\indexGLObject.cpp" />
+    <ClCompile Include="..\..\src\core\src\inputConfig.cpp" />
+    <ClCompile Include="..\..\src\core\src\integerMapBuffer.cpp" />
+    <ClCompile Include="..\..\src\core\src\json\json.c" />
+    <ClCompile Include="..\..\src\core\src\mushEngine.cpp" />
+    <ClCompile Include="..\..\src\core\src\mushLog.cpp" />
+    <ClCompile Include="..\..\src\core\src\mushMainScreen.cpp" />
+    <ClCompile Include="..\..\src\core\src\mushRasteriser.cpp" />
+    <ClCompile Include="..\..\src\core\src\mushSidebar.cpp" />
+    <ClCompile Include="..\..\src\core\src\mushWindow.cpp" />
+    <ClCompile Include="..\..\src\core\src\nodeManager.cpp" />
+    <ClCompile Include="..\..\src\core\src\nodeProcessor.cpp" />
+    <ClCompile Include="..\..\src\core\src\node_api.cpp" />
+    <ClCompile Include="..\..\src\core\src\opencl.cpp" />
+    <ClCompile Include="..\..\src\core\src\openglProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\outputConfig.cpp" />
+    <ClCompile Include="..\..\src\core\src\pipeio.cpp" />
+    <ClCompile Include="..\..\src\core\src\psnrProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\puEncode.cpp" />
+    <ClCompile Include="..\..\src\core\src\rasteriserEngine.cpp" />
+    <ClCompile Include="..\..\src\core\src\rasteriserPathDrawer.cpp" />
+    <ClCompile Include="..\..\src\core\src\rasteriserScene.cpp" />
+    <ClCompile Include="..\..\src\core\src\rasteriserSceneTesselation.cpp" />
+    <ClCompile Include="..\..\src\core\src\ringBuffer.cpp" />
+    <ClCompile Include="..\..\src\core\src\sdlinterface.cpp" />
+    <ClCompile Include="..\..\src\core\src\SetThreadName.cpp" />
+    <ClCompile Include="..\..\src\core\src\singleKernelProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\sphereGL.cpp" />
+    <ClCompile Include="..\..\src\core\src\sphereGL2.cpp" />
+    <ClCompile Include="..\..\src\core\src\sphereMapProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\ssimProcess.cpp" />
+    <ClCompile Include="..\..\src\core\src\tagInGui.cpp" />
+    <ClCompile Include="..\..\src\core\src\timerWrapper.cpp" />
+    <ClCompile Include="..\..\src\core\src\tinyobjloader\tiny_obj_loader.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\jon-player\libazure\libazure.vcxproj">
+      <Project>{3df98c06-818a-4d1f-9dbe-59b5d26e7533}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\jon-player\libscarlet\libscarlet.vcxproj">
+      <Project>{7fa2148b-e2c6-4b69-bf45-375b5c84a1c5}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\src\shaders\path.frag" />
+    <None Include="..\..\src\shaders\path.geom" />
+    <None Include="..\..\src\shaders\path.vert" />
+    <None Include="..\..\src\shaders\raster.frag" />
+    <None Include="..\..\src\shaders\raster.vert" />
+    <None Include="..\..\src\shaders\raster_tess.frag" />
+    <None Include="..\..\src\shaders\raster_tess.geom" />
+    <None Include="..\..\src\shaders\raster_tess.tess_control" />
+    <None Include="..\..\src\shaders\raster_tess.tess_eval" />
+    <None Include="..\..\src\shaders\raster_tess.vert" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{90589C34-974E-4563-8019-EB188E9EA4AF}</ProjectGuid>
+    <RootNamespace>mushcore</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\bin</OutDir>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\bin</OutDir>
+    <IntDir>$(ProjectDir)$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>..\..\..\libRocket\Include;..\..\..\jon-player\libscarlet\include;..\..\..\jon-player\libscarlet\thirdparty\include;..\..\..\jon-player\libazure\thirdparty\include;..\..\..\jon-player\libazure\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include;C:\Program Files %28x86%29\AMD APP SDK\3.0-0-Beta\include;c:\code\nvenc_3.0_windows_sdk\common\inc;..\..\thirdparty\include;../../src/core/include/Mush Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SCARLET_HAVE_CONFIG;CL_USE_DEPRECATED_OPENCL_2_0_APIS;MUSH_CORE_EXPORTS;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\..\jon-player\libscarlet\thirdparty\lib\x64\Debug;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\lib\x64;C:\Program Files %28x86%29\AMD APP SDK\3.0-0-Beta\lib\x86_64;..\..\thirdparty\x64\lib\Debug</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glew32.lib;Opengl32.lib;OpenCL.lib;Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;zlibwapi.lib;SDL2.lib;RocketCore_d.lib;libtiff.lib;d3d9.lib;FreeImagePlusd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>SCARLET_HAVE_CONFIG;CL_USE_DEPRECATED_OPENCL_2_0_APIS;MUSH_CORE_EXPORTS;_MBCS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\..\libRocket\Include;..\..\..\jon-player\libscarlet\include;..\..\..\jon-player\libscarlet\thirdparty\include;..\..\..\jon-player\libazure\thirdparty\include;..\..\..\jon-player\libazure\include;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\include;C:\Program Files %28x86%29\AMD APP SDK\3.0-0-Beta\include;c:\code\nvenc_3.0_windows_sdk\common\inc;..\..\thirdparty\include;../../src/core/include/Mush Core;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\..\jon-player\libscarlet\thirdparty\lib\x64\Release;..\..\thirdparty\x64\lib\Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Opengl32.lib;glew32.lib;OpenCL.lib;Half.lib;Iex.lib;IlmImf.lib;IlmThread.lib;Imath.lib;libtiff.lib;RocketCore.lib;zlibwapi.lib;SDL2.lib;d3d9.lib;FreeImagePlus.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

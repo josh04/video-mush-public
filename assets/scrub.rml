@@ -1,0 +1,49 @@
+<rml>
+<head>
+	<link type="text/rcss" href="default.rcss" />
+	<style>
+
+body {
+z-index: top;
+width:100%;
+height:100%;
+drag: drag;
+}
+
+#framecount {
+width: 100%;
+text-align: center;
+}
+	</style>
+	<script>
+from libscarlet import *
+
+id = -1
+
+def whiteclick():
+    global id
+    e = Event("scrubClick")
+    e.setAttributeFloat("x", float(event.parameters['mouse_x']))
+    e.setAttributeFloat("y", float(event.parameters['mouse_y']))
+    e.setAttributeFloat("width", float(document.offset_width))
+    e.setAttributeFloat("tag", float(id))
+    Events.Push(e)
+
+def scarletevent(e):
+    if e.isType('guiTag'):
+        #print 'tagging scrub.rml'
+        global id
+        id = e.getAttributeFloat("tag");
+        return
+
+
+	</script>
+</head>
+<body ondrag="whiteclick()" onclick="whiteclick()">
+
+<div id="framecount">
+
+</div>
+
+</body>
+</rml>

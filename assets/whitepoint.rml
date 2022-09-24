@@ -1,0 +1,139 @@
+<rml>
+<head>
+	<link type="text/rcss" href="default.rcss" />
+	<style>
+
+body {
+z-index: top;
+width:100%;
+height:100%;
+}
+
+#colourRegion {
+position:absolute;
+right:1cm;
+bottom:2cm;
+width:4cm;
+height:4cm;
+background-color: blue;
+drag: drag;
+
+background-decorator: image;
+background-image: colourgrid.png;
+
+}
+
+.bigtext {
+color: #FFFFFF;
+font-size:15pt;
+font-weight:bold;
+}
+
+#plus {
+position:absolute;
+z-index: top;
+width:0.6cm;
+height:0.6cm;
+drag:none;
+}
+
+.offset {
+drag:none;
+position:absolute;
+left:5px;
+top: -5px;
+}
+
+	</style>
+	<script>
+from libscarlet import *
+def drag():
+    pl = document.GetElementById("plus")
+    cl = document.GetElementById("colourRegion")
+    dist_x = event.parameters['mouse_x'] - cl.absolute_left
+    dist_y = event.parameters['mouse_y'] - cl.absolute_top
+    if dist_y < 0:
+        dist_y = 0;
+    if dist_x < 0:
+        dist_x = 0;
+    if dist_x - cl.client_width > 0:
+        dist_x = (cl.client_width)
+    if dist_y - cl.client_height > 0:
+        dist_y = (cl.client_height)
+    pl.style.left = str(dist_x-10)
+    pl.style.top = str(dist_y-10)
+    e = Event("whitePoint")
+    e.setAttributeFloat("x", dist_x)
+    e.setAttributeFloat("y", dist_y)
+    Events.Push(e)
+    event.StopPropagation()
+
+
+def dragend():
+    e = Event("whitePoint")
+    pl = document.GetElementById("plus")
+    cl = document.GetElementById("colourRegion")
+    dist_x = event.parameters['mouse_x'] - cl.absolute_left
+    dist_y = event.parameters['mouse_y'] - cl.absolute_top
+    e.setAttributeFloat("x", dist_x)
+    e.setAttributeFloat("y", dist_y)
+    Events.Push(e)
+
+def move():
+    print 'movin'
+    return;
+
+def whiteclick():
+    e = Event("whitePointClick")
+    e.setAttributeFloat("x", float(event.parameters['mouse_x']))
+    e.setAttributeFloat("y", float(event.parameters['mouse_y']))
+    Events.Push(e)
+
+def scarletevent(e):
+    if e.isType('whitePointReport'):
+        pl = document.GetElementById("plus")
+        red = document.GetElementById("red")
+        red.inner_rml = str(e.getAttributeFloat("red"))[0:4];
+        green = document.GetElementById("green")
+        green.inner_rml = str(e.getAttributeFloat("green"))[0:4];
+        blue = document.GetElementById("blue")
+        blue.inner_rml = str(e.getAttributeFloat("blue"))[0:4];
+        x = e.getAttributeFloat("red")*50 - 10;
+        y = e.getAttributeFloat("blue")*50 - 10;
+        pl.style.left = str(x)
+        pl.style.top = str(y)
+
+    #elif e.isType('mouseMove'):
+        #print 'Mouse Move:' + str(e.getAttributeInt("x")) + ' ' + str(e.getAttributeInt("y"))
+		#print 'filter init'
+        #element = document.GetElementById("filterSelect")
+        #filter = e.getAttributeString("filter")
+        #for f in engine.getFilters():
+            #key = f.key()
+            #index = element.Add(key, key)
+            #if key == filter:
+                #element.selection = index
+
+		
+	</script>
+</head>
+<body onclick="whiteclick()">
+
+<div id="rgb">
+R: <span id="red">2.00</span>
+G: <span id="green">1.00</span>
+B: <span id="blue">1.50</span>
+
+</div>
+
+<div id="colourRegion" ondrag="drag()" onclick="drag()">
+
+<div id="plus" class="bigtext">
+<div class="offset">+</div>
+</div>
+
+</div>
+
+
+</body>
+</rml>

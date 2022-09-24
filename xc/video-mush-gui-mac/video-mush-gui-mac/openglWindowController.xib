@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="openglWindowController">
+            <connections>
+                <outlet property="gl_view" destination="FmG-7g-ymS" id="xG1-x8-Ouv"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+            <view key="contentView" wantsLayer="YES" id="se5-gp-TjO">
+                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <openGLView useAuxiliaryDepthBufferStencil="NO" allowOffline="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FmG-7g-ymS">
+                        <rect key="frame" x="177" y="20" width="283" height="230"/>
+                    </openGLView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dxf-M8-bOV">
+                        <rect key="frame" x="14" y="222" width="85" height="32"/>
+                        <buttonCell key="cell" type="push" title="GUI Init" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="TEr-zl-2nC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="gui_click:" target="-2" id="Mxh-3b-2fy"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dxf-M8-bOV" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="1NY-PS-grd"/>
+                    <constraint firstAttribute="trailing" secondItem="FmG-7g-ymS" secondAttribute="trailing" constant="20" id="1OU-Te-PvH"/>
+                    <constraint firstItem="FmG-7g-ymS" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="9M7-Ds-0ut"/>
+                    <constraint firstItem="FmG-7g-ymS" firstAttribute="leading" secondItem="dxf-M8-bOV" secondAttribute="trailing" constant="84" id="JRT-VW-vW0"/>
+                    <constraint firstAttribute="bottom" secondItem="FmG-7g-ymS" secondAttribute="bottom" constant="20" id="pUb-DW-byo"/>
+                    <constraint firstItem="dxf-M8-bOV" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="txw-8c-kBb"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+        </window>
+    </objects>
+</document>

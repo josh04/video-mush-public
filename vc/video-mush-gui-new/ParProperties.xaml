@@ -1,0 +1,77 @@
+﻿<Window x:Class="video_mush_gui_new.ParProperties"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:video_mush_gui_new"
+        xmlns:mush="clr-namespace:video_mush_gui_new.Properties"
+        mc:Ignorable="d"
+        Title="ParTake" Height="314.728" Width="525">
+    <Window.Resources>
+        <local:NotConverter x:Key="inverter"/>
+    </Window.Resources>
+    <Grid>
+        <RadioButton x:Name="sponzaButton" IsChecked="{Binding parSponza, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Content="Sponza" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="sibenikButton" IsChecked="{Binding parSibenik, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Content="Sibenik" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top"/>
+        <RadioButton x:Name="officeButton" Content="Office" IsChecked="{Binding parOffice, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" HorizontalAlignment="Left" Margin="135,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="iterationsBox" 
+                 xmlns:mush="clr-namespace:video_mush_gui_new.Properties"
+                 Text="{Binding parIterations, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+                 HorizontalAlignment="Left" Height="22" Margin="66,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <Label x:Name="label1" Content="Iterations:" HorizontalAlignment="Left" Margin="4,80,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Offset:" HorizontalAlignment="Left" Margin="102,80,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="offsetBox" 
+                 Text="{Binding parOffset, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+                 HorizontalAlignment="Left" Height="22" Margin="147,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36"/>
+        <Label x:Name="label5" Content="Count:" HorizontalAlignment="Left" Margin="188,80,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="countBox" 
+                 Text="{Binding parCount, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+                 HorizontalAlignment="Left" Height="22" Margin="233,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="72"/>
+        <CheckBox x:Name="openglCheck" 
+                 IsChecked="{Binding parGL, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+                 Content="OpenGL Only" Margin="0,94,23,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="91"/>
+        <RadioButton x:Name="kitchenButton"  IsChecked="{Binding parKitchen, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Content="Kitchen" HorizontalAlignment="Left" Margin="190,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="parCameraTypeBox" Margin="0,40,10,0" SelectedIndex="{Binding parCameraTypeBox, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Height="22" VerticalAlignment="Top" HorizontalAlignment="Right" Width="126">
+            <ComboBoxItem Content="Perspective"/>
+            <ComboBoxItem Content="Spherical"/>
+        </ComboBox>
+
+        <TextBox x:Name="parCores" HorizontalAlignment="Left" Height="23" Margin="353,83,0,0" Text="{Binding parCores, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  IsEnabled="{Binding ElementName=parCoresCheck, Path=IsChecked, Converter={StaticResource inverter}}" TextWrapping="Wrap" VerticalAlignment="Top" Width="39"/>
+        <CheckBox x:Name="parCoresCheck" Content="Auto Core Limit" IsChecked="{Binding parCoresChecked, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"  Margin="0,74,11,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="103"/>
+        <Label x:Name="label8" Content="Cores:" HorizontalAlignment="Left" Margin="310,80,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="parJustGetMetadata" Content="Just Metadata" Margin="0,114,20,0" IsChecked="{Binding parJustMetadata, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" HorizontalAlignment="Right" Width="94"/>
+        <Label x:Name="label3_Copy" Content="GL Width:" Margin="0,7,141,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="62"/>
+        <Label x:Name="label4_Copy" Content="Height:" Margin="0,7,49,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="48"/>
+        <TextBox x:Name="glHeightBox"
+            Text="{Binding parGLHeight, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+            Height="23" Margin="0,11,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="39"/>
+        <TextBox x:Name="glWidthBox"
+            Text="{Binding parGLWidth, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" 
+            Height="23" Margin="0,11,97,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="39"/>
+
+        <TextBox x:Name="second_camera_x" HorizontalAlignment="Left" Height="23" Margin="353,111,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraX, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <TextBox x:Name="second_camera_y" HorizontalAlignment="Left" Height="23" Margin="353,139,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraY, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <TextBox x:Name="second_camera_z" HorizontalAlignment="Left" Height="23" Margin="353,167,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraZ, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <TextBox x:Name="second_camera_theta" HorizontalAlignment="Left" Height="23" Margin="353,195,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraTheta, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <TextBox x:Name="second_camera_phi" HorizontalAlignment="Left" Height="23" Margin="353,223,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraPhi, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <TextBox x:Name="second_camera_fov" HorizontalAlignment="Left" Height="23" Margin="353,251,0,0" TextWrapping="Wrap" Text="{Binding parSecondCameraFov, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" VerticalAlignment="Top" Width="36" IsEnabled="{Binding ElementName=parCameraSecond, Path=IsChecked}"/>
+        <Label x:Name="label9_Copy5" Content="X:" HorizontalAlignment="Left" Margin="328,108,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9_Copy6" Content="Y:" HorizontalAlignment="Left" Margin="329,136,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9_Copy7" Content="Z:" HorizontalAlignment="Left" Margin="329,164,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9_Copy8" Content="Θ:" HorizontalAlignment="Left" Margin="326,192,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9_Copy9" Content="Φ:" HorizontalAlignment="Left" Margin="326,220,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label9_Copy10" Content="FOV:" HorizontalAlignment="Left" Margin="313,248,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="parCameraSet" Content="Use PAR Default Camera Position" HorizontalAlignment="Left" Margin="10,147,0,0" VerticalAlignment="Top" IsChecked="{Binding parCameraSet, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parCameraSecond" Content="Generate Second Camera Offset" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top" IsChecked="{Binding parCameraSecond, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parCameraSecondJustMetadata" Content="Second Camera Just Metadata" HorizontalAlignment="Left" Margin="10,207,0,0" VerticalAlignment="Top" IsChecked="{Binding parCameraSecondJustMetadata, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parLowMem" Content="Low Graphics Memory Mode" HorizontalAlignment="Left" Margin="10,187,0,0" VerticalAlignment="Top" IsChecked="{Binding parLowMem, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parCameraSecondStereo" Content="Second View Stereo" HorizontalAlignment="Left" Margin="10,167,0,0" VerticalAlignment="Top" IsChecked="{Binding parCameraSecondStereo, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" Checked="parCameraSecondStereo_Checked" Unchecked="parCameraSecondStereo_Checked"/>
+        <CheckBox x:Name="parOculusCheck" Content="Oculus Rift" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" IsChecked="{Binding parOculusCheck, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="par360Viewer" Content="360 Viewer" Margin="0,134,36,0" VerticalAlignment="Top" IsChecked="{Binding par360Viewer, Mode=TwoWay, Source={x:Static mush:Settings.Default}}" HorizontalAlignment="Right" Width="78"/>
+        <CheckBox x:Name="parFinalSnapshot" Content="Save Final Image" Margin="0,154,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="114"  IsChecked="{Binding parFinalSnapshot, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parMushModel" Content="Use Mush Model" HorizontalAlignment="Left" Margin="92,30,0,0" VerticalAlignment="Top" IsChecked="{Binding parMushModel, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="fourOutputs" Content="Four Outputs" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" IsChecked="{Binding parFourOutputs, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+        <CheckBox x:Name="parFlipNormals" Content="Flip Normals" HorizontalAlignment="Left" Margin="10,227,0,0" VerticalAlignment="Top" IsChecked="{Binding parFlipNormals, Mode=TwoWay, Source={x:Static mush:Settings.Default}}"/>
+
+    </Grid>
+</Window>
